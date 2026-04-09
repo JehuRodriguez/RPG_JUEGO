@@ -10,7 +10,7 @@ namespace RPG_JUEGOS
     {
         static void Main(string[] args)
         {
-            // ===== PERSONAJE =====
+            //  PERSONAJE 
             string nombreJugador;
             int vidaJugador;
             int danoJugador;
@@ -25,7 +25,7 @@ namespace RPG_JUEGOS
             danoJugador = int.Parse(Console.ReadLine());
 
 
-            // ===== ENEMIGOS =====
+            //  ENEMIGOS 
             string nombreEnemigo = "Goblin";
             int vidaEnemigo = 80;
             int danoEnemigo = 15;
@@ -39,14 +39,14 @@ namespace RPG_JUEGOS
             int danoEnemigo3 = 20;
 
 
-            // ===== ITEMS =====
+            //  ITEMS 
             int pociones = 0;
             int comidas = 0;
 
             Console.WriteLine("\n¡Comienzan las batallas contra múltiples enemigos!\n");
 
-            // 🟢 BATALLA 1 - GOBLIN
-            // =========================
+            //  BATALLA 1 - GOBLIN
+           
             Console.WriteLine("Batalla contra " + nombreEnemigo);
 
             while (vidaJugador > 0 && vidaEnemigo > 0)
@@ -95,15 +95,14 @@ namespace RPG_JUEGOS
                 }
             }
 
-            // 🔥 DROP GOBLIN
+            //  DROP GOBLIN
             if (vidaEnemigo <= 0)
             {
                 Console.WriteLine("El Goblin dejó una poción.");
                 pociones++;
             }
 
-            // 🟣 BATALLA 2 - PROTOSS
-            // =========================
+            //  BATALLA 2 - PROTOSS
             if (vidaJugador > 0)
             {
                 Console.WriteLine("\nBatalla contra " + nombreEnemigo2);
@@ -154,15 +153,14 @@ namespace RPG_JUEGOS
                     }
                 }
 
-                // 🔥 DROP PROTOSS
+                //  DROP PROTOSS
                 if (vidaEnemigo2 <= 0)
                 {
                     Console.WriteLine("El Protoss dejó comida.");
                     comidas++;
                 }
 
-                // 🔴 BATALLA 3 - TERRAN
-                // =========================
+                // BATALLA 3 - TERRAN
                 if (vidaJugador > 0)
                 {
                     Console.WriteLine("\nBatalla contra " + nombreEnemigo3);
@@ -211,7 +209,7 @@ namespace RPG_JUEGOS
                         }
                     }
 
-                    // 🔥 DROP TERRAN
+                    // DROP TERRAN
                     if (vidaEnemigo3 <= 0)
                     {
                         Console.WriteLine("El Terran dejó una poción.");
@@ -219,10 +217,11 @@ namespace RPG_JUEGOS
                     }
                 }    }
 
-            // ===== FINAL =====
+            //  FINAL 
             if (vidaJugador > 0)
             {
                 Console.WriteLine("\n¡Derrotaste a todos los enemigos!");
+                Console.WriteLine("!Ganaste!");
             }
             else
             {
