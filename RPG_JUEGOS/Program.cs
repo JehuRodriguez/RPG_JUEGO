@@ -12,11 +12,17 @@ namespace RPG_JUEGOS
         {
             //PERSONAJE
             string nombreJugador;
-            int vidaJugador = 100;
-            int danoJugador = 20;
+            int vidaJugador;
+            int danoJugador;
 
             Console.WriteLine("Ingrese el Nombre de su personaje");
             nombreJugador = Console.ReadLine();
+
+            Console.WriteLine("Ingrese la vida de su personaje:");
+            vidaJugador = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Ingrese el daño de su personaje:");
+            danoJugador = int.Parse(Console.ReadLine());
 
             //ENEMIGO
             string nombreEnemigo = "Goblin";
