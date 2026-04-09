@@ -23,6 +23,12 @@ namespace RPG_JUEGOS
             int vidaEnemigo = 80;
             int danoEnemigo = 15;
 
+            //ITEM
+            int pociones = 2;
+
+            Console.WriteLine("Comiendza la batalla contra el " + nombreJugador);
+
+
 
 
 
