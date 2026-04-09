@@ -28,7 +28,52 @@ namespace RPG_JUEGOS
 
             Console.WriteLine("Comiendza la batalla contra el " + nombreJugador);
 
+            // TURNOS
+            while(vidaJugador > 0 && vidaEnemigo > 0)
+            {
+                Console.WriteLine("TURNO");
+                Console.WriteLine(nombreJugador + " Vida: " + vidaJugador);
+                Console.WriteLine(nombreEnemigo + " Vida: " + vidaEnemigo);
+                Console.WriteLine("Pociones: " + pociones);
 
+                Console.WriteLine("1. Atacar");
+                Console.WriteLine("2. Usar poción");
+                Console.Write("Elige una opción: ");
+                int opcion = int.Parse(Console.ReadLine());
+                if (opcion == 1)
+                {
+                    vidaEnemigo -= danoJugador;
+                    Console.WriteLine("Atacaste e hiciste " + danoJugador + " de daño.");
+                }
+
+                else if (opcion == 2 && pociones > 0)
+                {
+                    vidaJugador += 20;
+                    pociones--;
+                    Console.WriteLine("Usaste una poción.");
+                }
+
+                else
+                {
+                    Console.WriteLine("Opción inválida.");
+                }
+
+                if (vidaEnemigo > 0)
+                {
+                    vidaJugador -= danoEnemigo;
+                    Console.WriteLine("El enemigo te atacó.");
+                }
+            }
+
+            if (vidaJugador > 0)
+            {
+                Console.WriteLine("Ganaste");
+            }
+            else
+            {
+                Console.WriteLine("Perdiste");
+            }
+            Console.ReadLine();
 
 
 
