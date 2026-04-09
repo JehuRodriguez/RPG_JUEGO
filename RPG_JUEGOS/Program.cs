@@ -26,7 +26,7 @@ namespace RPG_JUEGOS
             //ITEM
             int pociones = 2;
 
-            Console.WriteLine("Comienza la batalla contra el " + nombreJugador);
+            Console.WriteLine("Comienza la batalla contra el " + nombreEnemigo);
 
             // TURNOS
             while(vidaJugador > 0 && vidaEnemigo > 0)
