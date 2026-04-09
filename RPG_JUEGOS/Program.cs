@@ -18,6 +18,11 @@ namespace RPG_JUEGOS
             Console.WriteLine("Ingrese el Nombre de su personaje");
             nombreJugador = Console.ReadLine();
 
+            //ENEMIGO
+            string nombreEnemigo = "Goblin";
+            int vidaEnemigo = 80;
+            int danoEnemigo = 15;
+
 
 
 
