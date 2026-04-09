@@ -10,6 +10,17 @@ namespace RPG_JUEGOS
     {
         static void Main(string[] args)
         {
+            //PERSONAJE
+            string nombreJugador;
+            int vidaJugador = 100;
+            int danoJugador = 20;
+
+            Console.WriteLine("Ingrese el Nombre de su personaje");
+            nombreJugador = Console.ReadLine();
+
+
+
+
         }
     }
 }
